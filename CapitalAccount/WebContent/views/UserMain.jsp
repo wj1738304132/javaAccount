@@ -33,9 +33,9 @@
 						<li><a href="javascript:void(0)" onclick="addTab('存款', 'http://www.baidu.com')">存款</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('取款', 'views/user_info.jsp')">取款</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('转账', 'views/user_info.jsp')">转账</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('查看个人信息', 'views/user_info.jsp')">查看个人信息</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改个人信息', 'views/user_info.jsp')">修改个人信息</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改密码', 'views/user_info.jsp')">修改密码</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('查看个人信息', 'views/user_show.jsp')">查看个人信息</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('修改个人信息', 'views/user_update.jsp')">修改个人信息</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('修改密码', 'views/user_pwd.jsp')">修改密码</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">注销</a></li>
 					</ul>
 				</div>
