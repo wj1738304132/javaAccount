@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/icon.css">
 <title>Insert title here</title>
+
 </head>
 <body>
 	<div style="height: 30px;background-color: #E1E1E1">
