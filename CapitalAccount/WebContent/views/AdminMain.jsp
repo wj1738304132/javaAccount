@@ -5,16 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="${pageContext.request.contextPath }/">
-<script type="text/javascript" src="Resource/jquery-easyui-1.6.10/jquery.min.js"></script>
-<script type="text/javascript" src="Resource/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
-<link rel="stylesheet" href="Resource/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
-<script type="text/javascript" src="Resource/js/main.js"></script>
+<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.min.js"></script>
+<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
+<link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
+<script type="text/javascript" src="resources/js/main.js"></script>
 <title>主页</title>
 </head>
 <body>
 	<div class="easyui-layout" fit="true" style="width:100%;">
 		<div data-options="region:'north'" style="height:100px" >
-			<img alt="logo" src="Resource/img/logo.jpg" style="display:inline-block;margin-left: 100px">
+			<img alt="logo" src="resources/img/logo.jpg" style="display:inline-block;margin-left: 100px">
 			<h1 style="display:inline-block">互联网+个人资金账户管理系统<br/><br/></h1>
 			<div style="float: right;margin-right: 100px">
 				${userinfo.realName }

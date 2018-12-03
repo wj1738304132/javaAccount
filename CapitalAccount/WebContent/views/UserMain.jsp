@@ -5,16 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <base href="${pageContext.request.contextPath }/">
-<script type="text/javascript" src="Resource/jquery-easyui-1.6.10/jquery.min.js"></script>
-<script type="text/javascript" src="Resource/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
-<link rel="stylesheet" href="Resource/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
-<script type="text/javascript" src="Resource/js/main.js"></script>
+<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.min.js"></script>
+<script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
+<link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
+<script type="text/javascript" src="resources/js/main.js"></script>
 <title>主页</title>
 </head>
 <body>
 	<div class="easyui-layout" fit="true" style="width:100%;">
 		<div data-options="region:'north'" style="height:100px" >
-			<img alt="logo" src="Resource/img/logo.jpg" style="display:inline-block;margin-left: 100px">
+			<img alt="logo" src="resources/img/logo.jpg" style="display:inline-block;margin-left: 100px">
 			<h1 style="display:inline-block">互联网+个人资金账户管理系统<br/><br/></h1>
 			<div style="float: right;margin-right: 100px">
 				${userinfo.realName }
@@ -26,16 +26,17 @@
 		</div>
 		<div data-options="region:'west',split:false" title="系统导航菜单" style="width:200px;">
 			<div class="easyui-accordion" style="width:500px;height:300px;">
-				<div title="后台管理" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+			<div title="新闻"></div>
+				<div title="操作菜单" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
 					<ul>
-						<li><a href="javascript:void(0)" onclick="addTab('所有用户', 'views/user_info.jsp')">所有用户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('已冻结账户', 'http://www.baidu.com')">已冻结账户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('已启用账户', 'views/user_info.jsp')">已启用账户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('开户', 'views/user_info.jsp')">开户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改个人密码', 'views/user_info.jsp')">修改个人密码</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('新闻管理', 'views/user_info.jsp')">新闻管理</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('所有用户', 'views/user_info.jsp')">查询操作记录</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('已冻结账户', 'http://www.baidu.com')">存款</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('已启用账户', 'views/user_info.jsp')">取款</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('开户', 'views/user_info.jsp')">转账</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('修改个人密码', 'views/user_info.jsp')">查看个人信息</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('新闻管理', 'views/user_info.jsp')">修改个人信息</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">修改密码</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">注销</a></li>
-						
 					</ul>
 				</div>
 				
