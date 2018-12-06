@@ -33,7 +33,7 @@
 						<li><a href="javascript:void(0)" onclick="addTab('已启用账户', 'views/user_info.jsp')">已启用账户</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('开户', 'views/user_info.jsp')">开户</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('修改个人密码', 'views/user_info.jsp')">修改个人密码</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('新闻管理', 'views/user_info.jsp')">新闻管理</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('新闻管理', 'views/News.jsp')">新闻管理</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">注销</a></li>
 						
 					</ul>
