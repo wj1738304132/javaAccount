@@ -11,16 +11,17 @@
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/icon.css">
-<script type="text/javascript" src="resources/js/userinfo.js"></script>
+<script type="text/javascript" src="resources/js/userupdate.js"></script>
 
 </head>
 <body>
     <div>查看个人信息</div>
     <div>
-		<table id="userTable" class="easyui-datagrid" url="userServlet?cmd=queryUser" style="width:100%;height:auto">
+		<table id="userTable" class="easyui-datagrid" url="userShow?cmd=queryUser" style="width:100%;height:auto">
 			<thead>
 				<tr>
 					<th data-options="field:'ck',checkbox:true"></th>
+					<th data-options="field:'personid',width:100,hidden:true" >编号</th>
 					<th data-options="field:'realname',width:100">姓名</th>
 					<th data-options="field:'birthday',width:100">出生日期</th>
 					<th data-options="field:'sex',width:80,align:'right'">用户性别</th>
@@ -30,6 +31,7 @@
 				</tr>
 			</thead>
 		</table>
+		<a href="javascript:void(0)" id="updateBtn" class="easyui-linkbutton" data-options="iconCls:'icon-update'">修改</a>
 	</div>
 	
 	<!-- 修改的弹出框 -->
@@ -38,10 +40,11 @@
 		style="width:50%;height:300px;padding:10px;">
 		<form id="updateform" style="text-align: center;">
 			<input name="userId" id="userId" type="hidden">
-			<table style="display: inline-block;">
-				<tr>
+			<table style="display: inline-block;" >
+				<tr>								
+					<input class="easyui-textbox" id="personid" name="personid" type="hidden">
 					<td><label>姓名:</label> </td>
-					<td><input class="easyui-textbox" id="realName" name="realName"> </td>
+					<td><input class="easyui-textbox" id="realname" name="realname"> </td>
 					<td><label>出生日期:</label> </td>
 					<td><input class="easyui-textbox" id="birthday" name="birthday"> </td>
 					<td><label>用户性别:</label></td>

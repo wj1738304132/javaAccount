@@ -1,13 +1,21 @@
-package com.chinasoft.cto.capitalAccount.model;
+package com.chinasoft.cto.capitalAccount.model.wj;
 
 import java.util.Date;
 
 public class UserInfo {
+	
 	private String personid;
+	private String accountid;
 	private String realname;
 	private String birthday;
 	private String sex;
 	private String cardid;
+	public String getAccountid() {
+		return accountid;
+	}
+	public void setAccountid(String accountid) {
+		this.accountid = accountid;
+	}
 	private String address;
 	private String telephone;
 	private String mail;
@@ -61,6 +69,13 @@ public class UserInfo {
 	}
 	public UserInfo() {
 		super();
+	}
+	@Override
+	public String toString() {
+		return "UserInfo [personid=" + personid + ", accountid=" + accountid
+				+ ", realname=" + realname + ", birthday=" + birthday
+				+ ", sex=" + sex + ", cardid=" + cardid + ", address="
+				+ address + ", telephone=" + telephone + ", mail=" + mail + "]";
 	}
 	
 }

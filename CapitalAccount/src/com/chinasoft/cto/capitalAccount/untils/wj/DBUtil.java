@@ -1,4 +1,4 @@
-package com.chinasoft.cto.capitalAccount.untils;
+package com.chinasoft.cto.capitalAccount.untils.wj;
 
 import java.sql.Connection;
 import java.sql.SQLException;

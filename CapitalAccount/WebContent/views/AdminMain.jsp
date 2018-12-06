@@ -8,7 +8,7 @@
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.min.js"></script>
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
-<script type="text/javascript" src="resources/js/main.js"></script>
+<script type="text/javascript" src="resources/js/adminmain.js"></script>
 <title>主页</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
 			<img alt="logo" src="resources/img/logo.jpg" style="display:inline-block;margin-left: 100px">
 			<h1 style="display:inline-block">互联网+个人资金账户管理系统<br/><br/></h1>
 			<div style="float: right;margin-right: 100px">
-				${userinfo.realName }
+				${userinfo.adminName}
 				<a href="#"  class="easyui-linkbutton" >注销</a>
 			</div>
 		</div>

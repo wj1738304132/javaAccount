@@ -21,6 +21,7 @@
 			<thead>
 				<tr>
 					<th data-options="field:'ck',checkbox:true"></th>
+					
 					<th data-options="field:'realname',width:100">姓名</th>
 					<th data-options="field:'birthday',width:100">出生日期</th>
 					<th data-options="field:'sex',width:80,align:'right'">用户性别</th>

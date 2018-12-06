@@ -9,7 +9,7 @@
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/locale/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="resources/js/login.js"></script>
+<script type="text/javascript" src="resources/js/adminlogin.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
 
 				<div>
 					<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-ok" id="login" style="width:45%;height:32px">登录</a>
-					<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-ok" id="login" style="width:45%;height:32px">管理员登录</a>
+					<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-ok" id="adminlogin" style="width:45%;height:32px">管理员登录</a>
 				</div>
 			</div>
 		</form>

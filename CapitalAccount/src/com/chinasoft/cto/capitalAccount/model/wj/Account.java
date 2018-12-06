@@ -1,4 +1,4 @@
-package com.chinasoft.cto.capitalAccount.model;
+package com.chinasoft.cto.capitalAccount.model.wj;
 
 public class Account {
 	private String accountid;
