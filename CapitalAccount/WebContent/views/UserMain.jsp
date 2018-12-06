@@ -33,15 +33,6 @@
 			<div title="新闻"></div>
 				<div title="操作菜单" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
 					<ul>
-<<<<<<< HEAD
-						<li><a href="javascript:void(0)" onclick="addTab('查询操作记录', 'views/user_info.jsp')">查询操作记录</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('存款', 'http://www.baidu.com')">存款</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('取款', 'views/user_info.jsp')">取款</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('转账', 'views/user_info.jsp')">转账</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('查看个人信息', 'views/usershow.jsp')">查看个人信息</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改个人信息', 'views/userupdate.jsp')">修改个人信息</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改密码', 'views/userpwd.jsp')">修改密码</a></li>
-=======
 						<li><a href="javascript:void(0)" onclick="addTab('查询交易记录', 'views/user_info.jsp')">查询交易记录</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('存款', 'views/user_info1.jsp')">存款</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('取款', 'views/user_info2.jsp')">取款</a></li>
@@ -49,7 +40,6 @@
 						<li><a href="javascript:void(0)" onclick="addTab('查看个人信息', 'views/user_info.jsp')">查看个人信息</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('修改个人信息', 'views/user_info.jsp')">修改个人信息</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('修改密码', 'views/user_info.jsp')">修改密码</a></li>
->>>>>>> branch 'master' of https://github.com/wj1738304132/javaAccount.git
 						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">注销</a></li>
 					</ul>
 				</div>
