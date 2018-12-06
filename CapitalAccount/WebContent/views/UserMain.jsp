@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,10 +30,10 @@
 			<div title="新闻"></div>
 				<div title="操作菜单" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
 					<ul>
-						<li><a href="javascript:void(0)" onclick="addTab('查询操作记录', 'views/user_info.jsp')">查询操作记录</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('存款', 'http://www.baidu.com')">存款</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('取款', 'views/user_info.jsp')">取款</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('转账', 'views/user_info.jsp')">转账</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('查询交易记录', 'views/user_info.jsp')">查询交易记录</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('存款', 'views/user_info1.jsp')">存款</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('取款', 'views/user_info2.jsp')">取款</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('转账', 'views/user_info3.jsp')">转账</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('查看个人信息', 'views/user_info.jsp')">查看个人信息</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('修改个人信息', 'views/user_info.jsp')">修改个人信息</a></li>
 						<li><a href="javascript:void(0)" onclick="addTab('修改密码', 'views/user_info.jsp')">修改密码</a></li>
