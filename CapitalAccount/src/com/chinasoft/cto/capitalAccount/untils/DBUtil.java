@@ -1,4 +1,4 @@
-package com.chinasoft.cto.capitalAccount.utils;
+package com.chinasoft.cto.capitalAccount.untils;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,8 +13,12 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+/**
+ * ��ѯ�κζ���Ĺ�����
+ * @author Administrator
+ *
+ */
 public class DBUtil {
-	
 	private static ComboPooledDataSource dataSource=null;
 	private static 	QueryRunner qr=null;
 	static{
@@ -35,9 +39,9 @@ public class DBUtil {
 	}
 	
 	/**
-	 * 通用的更新数据方法
-	 * @param sql 更新sql语句
-	 * @param params 更新sql的条件
+	 * ͨ�õĸ�����ݷ���
+	 * @param sql ����sql���
+	 * @param params ����sql������
 	 * @return
 	 */
 	public static int update(String sql,Object...params){
@@ -83,10 +87,10 @@ public class DBUtil {
 		}
 	}
 	/**
-	 * 通用的查询一个对象的方法
-	 * @param t 查询的对象class类型
-	 * @param sql 查询sql
-	 * @param params 查询参数
+	 * ͨ�õĲ�ѯһ������ķ���
+	 * @param t ��ѯ�Ķ���class����
+	 * @param sql ��ѯsql
+	 * @param params ��ѯ����
 	 * @return
 	 * @throws Exception
 	 */
@@ -95,10 +99,10 @@ public class DBUtil {
 		return bean;
 	}
 	/**
-	 * 通用的查询多个对象的方法
-	 * @param t 查询的对象class类型
-	 * @param sql 查询sql
-	 * @param params 查询参数
+	 * ͨ�õĲ�ѯ�������ķ���
+	 * @param t ��ѯ�Ķ���class����
+	 * @param sql ��ѯsql
+	 * @param params ��ѯ����
 	 * @return
 	 * @throws Exception
 	 */
@@ -107,7 +111,7 @@ public class DBUtil {
 		return list;
 	}
 	/**
-	 * 通用的查询数值型方法
+	 * ͨ�õĲ�ѯ��ֵ�ͷ���
 	 * @param t
 	 * @param sql
 	 * @param params

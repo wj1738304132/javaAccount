@@ -1,4 +1,4 @@
-package com.chinasoft.cto.capitalAccount.utils;
+package com.chinasoft.cto.capitalAccount.untils;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 public class BaseServlet extends HttpServlet{
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp)  {
-		// TODO Auto-generated method stub
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
 		String methodName=req.getParameter("cmd");
-		if(methodName==null) {
+		if(methodName==null){
 			methodName="execute";
 		}
 		try {
@@ -38,10 +38,9 @@ public class BaseServlet extends HttpServlet{
 			e.printStackTrace();
 		}
 	}
-
-	protected void execute(HttpServletRequest req,HttpServletResponse resp) throws ServletException,IOException{
-		
-	}
 	
-
+	protected void execute(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		System.out.println("默认执行该方法");
+	}
 }

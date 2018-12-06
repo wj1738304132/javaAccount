@@ -1,0 +1,12 @@
+ @CHARSET "UTF-8";
+#headTxt{
+	margin-top: auto;
+	margin-bottom: auto;
+/* 	font: color="#FFFFFF"; */
+	color: white;
+}
+#BanQuan{
+	background-color: #909090;
+	height: 50px;
+	color: white;
+} 
