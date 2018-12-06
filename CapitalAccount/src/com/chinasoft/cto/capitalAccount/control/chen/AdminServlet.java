@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javafx.scene.control.Alert;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -59,7 +61,7 @@ public class AdminServlet extends BaseServlet{
 		String telephone=req.getParameter("telephone");
 		String cardid=req.getParameter("cardid");
 		User user=new User();
-		if (password!=null && !password.equals("") && passwordNew.equals(passwordNew)) {
+		if (password!=null && !password.equals("") && password.equals(passwordNew)) {
 			user.setAccountid(accountid);
 			user.setPassword(passwordNew);
 			user.setBalance(balance);
