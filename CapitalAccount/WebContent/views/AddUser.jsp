@@ -18,7 +18,7 @@
 	<div id="addUser" align="center">
 		<form id="addform" style="text-align: center;">
 			<table style="display: inline-block;">
-				<td>
+				<td> 
 					<tr><label class="name1">账户:</label><input class="easyui-textbox" name="accountid" required></tr><br/>
 					<tr><label class="name1">密码:</label><input class="easyui-textbox" name="password" required></tr><br/>
 					<tr><label class="name1">确认密码:</label><input class="easyui-textbox" name="passwordNew" required></tr><br/>
