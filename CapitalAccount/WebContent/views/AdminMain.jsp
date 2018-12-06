@@ -15,24 +15,23 @@
 <body>
 	<div class="easyui-layout" fit="true" style="width:100%;">
 		<div data-options="region:'north'" style="height:100px;background-color: #002A5B;">
-			<img alt="logo" src="resources/img/logo.jpg" style="display:inline-block;margin-bottom: auto;margin-top: auto;">
+			<img alt="logo" src="resources/img/logo.jpg" style="display:inline-block;margin-top: 12px;">
 			<h1 style="display:inline-block;" id="headTxt" >互联网+个人资金账户管理系统<br/><br/></h1>
 		</div>
 		<div region="south" split="false" id="BanQuan">
+			<span style="display:inline-block;margin-left: 50%;margin-top: 15px">
 				版权所有&copy;2000-2016中软国际公司
+			</span>
 		</div>
 		<div data-options="region:'west',split:false" title="系统导航菜单" style="width:200px;">
 			<div class="easyui-accordion" style="width:500px;height:300px;">
 				<div title="后台管理" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
 					<ul>
 						<li><a href="javascript:void(0)" onclick="addTab('所有用户', 'views/AllUsers.jsp')">所有用户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('已冻结账户', 'http://www.baidu.com')">已冻结账户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('已启用账户', 'views/user_info.jsp')">已启用账户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('开户', 'views/user_info.jsp')">开户</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('修改个人密码', 'views/user_info.jsp')">修改个人密码</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('新闻管理', 'views/user_info.jsp')">新闻管理</a></li>
-						<li><a href="javascript:void(0)" onclick="addTab('注销', 'views/user_info.jsp')">注销</a></li>
-						
+						<li><a href="javascript:void(0)" onclick="addTab('已冻结账户', 'views/FrozenUser.jsp')">已冻结账户</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('已启用账户', 'views/EnableUser.jsp')">已启用账户</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('开户', 'views/AddUser.jsp')">开户</a></li>
+						<li><a href="javascript:void(0)" onclick="addTab('修改个人密码', 'views/UpdatePwd.jsp')">修改个人密码</a></li>					
 					</ul>
 				</div>
 				
@@ -42,8 +41,7 @@
 		<div data-options="region:'center',iconCls:'icon-ok'">
 			<div id="tabs" class="easyui-tabs" style="width:100%;height:100%;" >
 				<div title="Home">
-				</div>
-				
+				</div>				
 			</div>
 		</div>
 	</div>
