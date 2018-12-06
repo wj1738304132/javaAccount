@@ -1,4 +1,4 @@
-package com.chinasoft.cto.capitalAccount.utils;
+package com.chinasoft.cto.capitalAccount.untils.wj;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,8 +13,12 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+/**
+ * ²éÑ¯ÈÎºÎ¶ÔÏóµÄ¹¤¾ßÀà
+ * @author Administrator
+ *
+ */
 public class DBUtil {
-	
 	private static ComboPooledDataSource dataSource=null;
 	private static 	QueryRunner qr=null;
 	static{
@@ -35,9 +39,9 @@ public class DBUtil {
 	}
 	
 	/**
-	 * é€šç”¨çš„æ›´æ–°æ•°æ®æ–¹æ³•
-	 * @param sql æ›´æ–°sqlè¯­å¥
-	 * @param params æ›´æ–°sqlçš„æ¡ä»¶
+	 * Í¨ÓÃµÄ¸üĞÂÊı¾İ·½·¨
+	 * @param sql ¸üĞÂsqlÓï¾ä
+	 * @param params ¸üĞÂsqlµÄÌõ¼ş
 	 * @return
 	 */
 	public static int update(String sql,Object...params){
@@ -83,10 +87,10 @@ public class DBUtil {
 		}
 	}
 	/**
-	 * é€šç”¨çš„æŸ¥è¯¢ä¸€ä¸ªå¯¹è±¡çš„æ–¹æ³•
-	 * @param t æŸ¥è¯¢çš„å¯¹è±¡classç±»å‹
-	 * @param sql æŸ¥è¯¢sql
-	 * @param params æŸ¥è¯¢å‚æ•°
+	 * Í¨ÓÃµÄ²éÑ¯Ò»¸ö¶ÔÏóµÄ·½·¨
+	 * @param t ²éÑ¯µÄ¶ÔÏóclassÀàĞÍ
+	 * @param sql ²éÑ¯sql
+	 * @param params ²éÑ¯²ÎÊı
 	 * @return
 	 * @throws Exception
 	 */
@@ -95,10 +99,10 @@ public class DBUtil {
 		return bean;
 	}
 	/**
-	 * é€šç”¨çš„æŸ¥è¯¢å¤šä¸ªå¯¹è±¡çš„æ–¹æ³•
-	 * @param t æŸ¥è¯¢çš„å¯¹è±¡classç±»å‹
-	 * @param sql æŸ¥è¯¢sql
-	 * @param params æŸ¥è¯¢å‚æ•°
+	 * Í¨ÓÃµÄ²éÑ¯¶à¸ö¶ÔÏóµÄ·½·¨
+	 * @param t ²éÑ¯µÄ¶ÔÏóclassÀàĞÍ
+	 * @param sql ²éÑ¯sql
+	 * @param params ²éÑ¯²ÎÊı
 	 * @return
 	 * @throws Exception
 	 */
@@ -107,7 +111,7 @@ public class DBUtil {
 		return list;
 	}
 	/**
-	 * é€šç”¨çš„æŸ¥è¯¢æ•°å€¼å‹æ–¹æ³•
+	 * Í¨ÓÃµÄ²éÑ¯ÊıÖµĞÍ·½·¨
 	 * @param t
 	 * @param sql
 	 * @param params

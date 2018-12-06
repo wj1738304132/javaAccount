@@ -4,8 +4,13 @@
 }
 .name1{
 	background-color:#909090;
-	height:20px;
+	height:40px;
 	width:200px;
+	
+}
+.name2{
+	height:50px;
+	width:300px;
 }
 #end{
 	float: right;

@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 
-import jdk.nashorn.internal.objects.annotations.Where;
 
 import com.chinasoft.cto.capitalAccount.dao.AdminDaoInterface;
 import com.chinasoft.cto.capitalAccount.model.User;

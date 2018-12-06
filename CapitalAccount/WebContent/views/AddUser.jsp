@@ -18,24 +18,53 @@
 	<div id="addUser" align="center">
 		<form id="addform" style="text-align: center;">
 			<table style="display: inline-block;">
-				<td> 
-					<tr><label class="name1">账户:</label><input class="easyui-textbox" name="accountid" required></tr><br/>
-					<tr><label class="name1">密码:</label><input class="easyui-textbox" name="password" required></tr><br/>
-					<tr><label class="name1">确认密码:</label><input class="easyui-textbox" name="passwordNew" required></tr><br/>
-					<tr><label class="name1">开户金额:</label><input class="easyui-textbox" name="balance"></tr><br/>
-					<tr><label class="name1">用户个人信息编号:</label><input class="easyui-textbox" name="personid" required></tr><br/>
-					<tr><label class="name1">姓名:</label><input class="easyui-textbox" name="realname" required></tr><br/>
-					<tr><label class="name1">出生日期:</label><input id="birthday" name="birthday" type="text" class="easyui-datebox" required="required"><br/>
-					<tr><label class="name1">性别:</label><select class="easyui-combobox" name="sex" style="width:60px">
+				<tr> 
+					<td class="name1"><label>账    户:</label></td>
+					<td><input class="easyui-textbox name2" name="accountid" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>密    码:</label></td>
+					<td><input class="easyui-textbox name2" name="password" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>确认密码:</label></td>
+					<td><input class="easyui-textbox name2" name="passwordNew" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>开户金额:</label></td>
+					<td><input class="easyui-textbox name2" name="balance"></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>用户个人信息编号:</label></td>
+					<td><input class="easyui-textbox name2" name="personid" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>姓    名:</label></td>
+					<td><input class="easyui-textbox name2" name="realname" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>出生日期:</label></td>
+					<td><input id="birthday" name="birthday" type="text" class="easyui-datebox name2" required="required"></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>性    别:</label></td>
+					<td><select class="easyui-combobox name2" name="sex" style="width:60px">
 												<option>男</option>
 												<option>女</option>
-												</select>
-					</tr><br/>
-					<tr><label class="name1">家庭地址:</label><input class="easyui-textbox" name="address" required></tr><br/>
-					<tr><label class="name1">电话号码:</label><input class="easyui-textbox" name="telephone" required></tr><br/>
-					<tr><label class="name1">身份证号:</label><input class="easyui-textbox" name="cardid" required></tr><br/>
-				</td>
-				
+												</select></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>家庭地址:</label></td>
+					<td><input class="easyui-textbox name2" name="address" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>电话号码:</label></td>
+					<td><input class="easyui-textbox name2" name="telephone" required></td>
+				</tr>
+				<tr> 
+					<td class="name1"><label>身份证号:</label></td>
+					<td><input class="easyui-textbox name2" name="cardid" required></td>			
+				</tr>				
 			</table>
 			<br/>			
 			<a href="javascript:void(0)" id="addUserSaveBtn" class="easyui-linkbutton" data-options="iconCls:'icon-save'">提交</a>

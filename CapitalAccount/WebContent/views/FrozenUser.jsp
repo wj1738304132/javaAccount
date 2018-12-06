@@ -31,7 +31,7 @@
 			<thead data-options="frozen:true">
 				<tr>
 					<th data-options="field:'ck',checkbox:true"></th>
-					<th data-options="field:'id',width:30,align:'center'">序号</th>
+					<th data-options="field:'id',width:30,align:'center',formatter:myformat">序号</th>
 					<th data-options="field:'accountid',width:100,align:'center'">账户</th>
 					<th data-options="field:'balance',width:150,align:'center'">账户余额</th>
 					<th data-options="field:'realname',width:80,align:'center'">姓名</th>
