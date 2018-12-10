@@ -6,7 +6,7 @@ import com.chinasoft.cto.capitalAccount.model.User;
 
 public interface AdminDaoInterface {
 
-	List<User> queryAllUser(User user);
+	List<User> queryAllUser(User user, int start, int length);
 
 	List<User> queryFrozenUser(User user);
 
@@ -25,6 +25,8 @@ public interface AdminDaoInterface {
 	boolean frozenUser(String[] ids);
 
 	boolean enableUser(String[] ids);
+
+	int queryAllUserCount(User user);
 
 	
 }

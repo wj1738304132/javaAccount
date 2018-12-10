@@ -1,62 +1,17 @@
 
 $(function(){
-	//分页查询
-	var pageSize=5;//每页数量
-	var pageNum=1;//默认第一页
-	var total=30;
-	var params={
-			pageSize:pageSize,
-			pageNum:pageNum,
-	}
-	var initPage=function(){
-		$("#AllUserPage").pagination({
-			total:total,
-			pageSize:params.pageSize,
-			pageList: [5,10,20,50],
-			beforePageText: '第',
-			afterPageText: '页    共 {pages} 页',  
-			displayMsg:'当前显示 {from} - {to} 条记录   共 {total} 条记录',		
-			onSelectPage:function(pageNumber, pageSize){
-				params.pageNum=pageNumber;
-				params.pageSize=pageSize;
-				queryAllUser();
+	//已启用账户信息
+	var queryEnableUser=function(){
+		$.ajax({
+			url:"adminServlet?cmd=queryEnableUser",
+			type:"post",
+			dataType:"json",
+			success:function(resp){
+					$("#allUser").datagrid("loadData",resp.rows);			
 			}
 		})
 	}
-	var queryAllUser=function(){
-		$.ajax({
-			url:"adminServlet?cmd=queryUser",
-			type:"post",
-			dataType:"json",
-			data:params,
-			success:function(resp){
-//				if(resp.total>0){
-					$("#allUser").datagrid("loadData",resp.rows);
-//					total=resp.total;
-					initPage();
-//				}				
-			}
-		})
-	}
-	queryAllUser();
-	
-	//查询按钮
-	$("#searchBtn").click(function(){
-		$.ajax({
-			url:"adminServlet?cmd=queryUser",
-			type:"post",
-			dataType:"json",
-			data:$("#searchForm").serialize(),
-			success:function(resp){
-				$("#allUser").datagrid("loadData",resp.rows);
-			}
-		})		
-	})
-//	$("#allUser").datagrid({
-//	    onLoadSuccess : function () {
-//	        $(this).datagrid("fixRownumber");
-//	    }
-//	})
+	queryEnableUser();
 	//冻结按钮
 	$("#frozenBtn").click(function(){
 		var rows=$("#allUser").datagrid("getSelected");	
@@ -74,7 +29,7 @@ $(function(){
 			success:function(resp){
 				//更新表格数据
 //				$("#allUser").datagrid("reload");
-				queryAllUser();
+				queryEnableUser();
 			}	
 		})
 	})
@@ -95,7 +50,7 @@ $(function(){
 			},
 			success:function(resp){
 //				$("#allUser").datagrid("reload");
-				queryAllUser();
+//				queryFrozenAllUser();
 			}
 		})		
 	})	

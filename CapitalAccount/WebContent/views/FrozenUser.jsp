@@ -10,7 +10,7 @@
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/icon.css">
-<script type="text/javascript" src="resources/js/adminInfo.js"></script>
+<script type="text/javascript" src="resources/js/adminInfo1.js"></script>
 <title>冻结用户界面</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
 		</form>
 	</div>
 	<div>
-		<table id="allUser" class="easyui-datagrid" style="width:100%;height:250px" url="adminServlet?cmd=queryFrozenUser">
+		<table id="allUser" class="easyui-datagrid" style="width:100%;height:250px">
 			<thead data-options="frozen:true">
 				<tr>
 					<th data-options="field:'ck',checkbox:true"></th>

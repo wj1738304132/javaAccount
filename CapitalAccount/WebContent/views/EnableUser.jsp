@@ -10,7 +10,7 @@
 <script type="text/javascript" src="resources/jquery-easyui-1.6.10/jquery.easyui.min.js"></script>
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/bootstrap/easyui.css">
 <link rel="stylesheet" href="resources/jquery-easyui-1.6.10/themes/icon.css">
-<script type="text/javascript" src="resources/js/adminInfo.js"></script>
+<script type="text/javascript" src="resources/js/adminInfo2.js"></script>
 <title>启用用户界面</title>
 </head>
 <body>

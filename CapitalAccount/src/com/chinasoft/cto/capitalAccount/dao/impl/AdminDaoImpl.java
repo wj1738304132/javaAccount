@@ -18,7 +18,7 @@ public class AdminDaoImpl implements AdminDaoInterface{
 	 * 查看所有的用户
 	 */
 	@Override
-	public List<User> queryAllUser(User user) {
+	public List<User> queryAllUser(User user, int start, int length) {
 		StringBuffer sql=new StringBuffer("select pa.accountid,pa.balance,pa.realname,pa.address,pa.cardid,pa.telephone,s.name,pa.mark from "+
 				"(select a.statusid,a.balance,p.accountid,p.realname,p.address,p.cardid,p.telephone,a.mark "+
 				"from personinfo p left join account a on p.accountid=a.accountid) pa "+
@@ -28,10 +28,9 @@ public class AdminDaoImpl implements AdminDaoInterface{
 			sql.append(" and pa.realname like ?");
 			params.add(user.getRealname()+"%");
 		}
+		//分页查询的每一页查询
+		sql.append(" limit "+start+","+length);
 		
-//		sql.append(" limit ?,?");
-//		params.add(start);
-//		params.add(length);
 		try {
 			return DBUtil.queryAll(User.class, sql.toString(), params.toArray());
 		} catch (Exception e) {
@@ -39,6 +38,28 @@ public class AdminDaoImpl implements AdminDaoInterface{
 			e.printStackTrace();
 		}
 		return null;
+	}
+	/**
+	 * 查询在查看所有用户下的总条数
+	 */
+	@Override
+	public int queryAllUserCount(User user) {
+		StringBuffer sql=new StringBuffer("select count(*) from "+
+				"(select a.statusid,a.balance,p.accountid,p.realname,p.address,p.cardid,p.telephone,a.mark "+
+				"from personinfo p left join account a on p.accountid=a.accountid) pa "+
+				"left join status s on pa.statusid=s.statusid where 1=1 and pa.mark=0 ");
+		List<Object> params=new ArrayList<Object>();
+		if(user.getRealname()!=null && !user.getRealname().equals("")){
+			sql.append(" and pa.realname like ?");
+			params.add(user.getRealname()+"%");
+		}
+		try {
+			return DBUtil.queryNumber(Long.class, sql.toString(), params.toArray()).intValue();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
 	}
 	/**
 	 * 查看冻结的用户
@@ -267,6 +288,6 @@ public class AdminDaoImpl implements AdminDaoInterface{
 			}
 		}
 		return false;
-	}
+	}	
 
 }

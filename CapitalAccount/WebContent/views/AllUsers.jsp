@@ -31,7 +31,7 @@
 		</form>
 	</div>
 	<div>
-		<table id="allUser" class="easyui-datagrid" url="adminServlet?cmd=queryUser" style="width:100%;height:250px">
+		<table id="allUser" class="easyui-datagrid" url="adminServlet?cmd=queryUser" style="width:100%;">
 			<thead data-options="frozen:true">
 				<tr>
 					<th data-options="field:'ck',checkbox:true"></th>
@@ -46,8 +46,8 @@
 				</tr>
 			</thead>
 		</table>
-		<div id="AllUserPage" class="easyui-pagination" align="center">
-		 
+		<div id="AllUserPage" class="easyui-pagination" align="center" style="background:#efefef;border:1px solid #ccc;">
+		 	
 		</div>
 	</div>
 	<!-- 添加的弹出框 -->

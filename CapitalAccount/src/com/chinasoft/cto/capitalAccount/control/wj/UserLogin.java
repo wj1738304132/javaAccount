@@ -29,7 +29,7 @@ public class UserLogin extends BaseServlet{
 		account.setPassword(loginPwd);
 		
 		UserInfo userInfo=daoInterface.doLogin(account);
-		//ÉèÖÃ±àÂë¼¯
+		//ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ë¼¯
 				resp.setCharacterEncoding("utf-8");
 				resp.setContentType("text/html;charset=utf-8");
 		
@@ -39,12 +39,12 @@ public class UserLogin extends BaseServlet{
 			
 			JSONObject jsonObj=new JSONObject();
 			jsonObj.put("state", true);
-			jsonObj.put("tip", "µÇÂ¼³É¹¦");
+			jsonObj.put("tip", "ï¿½ï¿½Â¼ï¿½É¹ï¿½");
 			jsonObj.put("user", JSONObject.fromObject(userInfo));
 			resp.getWriter().print(jsonObj);
 			
 		}else{
-			String json="{state:false,tip:'µÇÂ¼Ê§°Ü£¬ÓÃ»§Ãû»òÃÜÂë´íÎó'}";
+			String json="{state:false,tip:'ï¿½ï¿½Â¼Ê§ï¿½Ü£ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'}";
 			resp.getWriter().print(json);
 		}
 	}

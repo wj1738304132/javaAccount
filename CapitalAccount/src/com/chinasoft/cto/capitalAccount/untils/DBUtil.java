@@ -14,7 +14,7 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
- * ��ѯ�κζ���Ĺ�����
+ * 查询任何对象的工具类
  * @author Administrator
  *
  */
@@ -39,9 +39,9 @@ public class DBUtil {
 	}
 	
 	/**
-	 * ͨ�õĸ�����ݷ���
-	 * @param sql ����sql���
-	 * @param params ����sql������
+	 *通用的更新数据方法
+	 * @param sql 更新sql语句
+	 * @param params 更新sql的条件
 	 * @return
 	 */
 	public static int update(String sql,Object...params){

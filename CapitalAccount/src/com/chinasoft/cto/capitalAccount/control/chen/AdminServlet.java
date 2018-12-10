@@ -2,9 +2,12 @@ package com.chinasoft.cto.capitalAccount.control.chen;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
-import javafx.scene.control.Alert;
+import com.chinasoft.cto.capitalAccount.untils.BaseServlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +20,8 @@ import net.sf.json.JSONObject;
 import com.chinasoft.cto.capitalAccount.dao.AdminDaoInterface;
 import com.chinasoft.cto.capitalAccount.dao.impl.AdminDaoImpl;
 import com.chinasoft.cto.capitalAccount.model.User;
-import com.chinasoft.cto.capitalAccount.untils.BaseServlet;
+
+
 @WebServlet("/adminServlet")
 public class AdminServlet extends BaseServlet{
 	AdminDaoInterface adminDao=new AdminDaoImpl();
@@ -27,12 +31,21 @@ public class AdminServlet extends BaseServlet{
 	 * @param resp
 	 */
 	public void queryUser(HttpServletRequest req,HttpServletResponse resp){
+		//接收参数
+		int length=Integer.valueOf(req.getParameter("pageSize"));
+		String pageNum=req.getParameter("pageNum");
+		int start=(Integer.valueOf(pageNum)-1)*length;
+		
 		String realname=req.getParameter("realName");
 		User user=new User();
 		if(realname!=null){
 			user.setRealname(realname);
 		}
-		List<User> users=adminDao.queryAllUser(user);
+		
+		//调用dao分页查询
+		List<User> users=adminDao.queryAllUser(user,start,length);
+		//查询该条件下总条数
+		int total=adminDao.queryAllUserCount(user);
 		JSONObject json=new JSONObject();
 		json.put("rows", JSONArray.fromObject(users));
 		try {
@@ -46,16 +59,25 @@ public class AdminServlet extends BaseServlet{
 	 * 开户
 	 * @param req
 	 * @param resp
+	 * @throws ParseException 
 	 * @throws IOException 
 	 */
-	public void addUser(HttpServletRequest req,HttpServletResponse resp){
+	public void addUser(HttpServletRequest req,HttpServletResponse resp) throws ParseException{
 		String accountid=req.getParameter("accountid");
 		String password=req.getParameter("password");
 		String passwordNew=req.getParameter("passwordNew");
 		String balance=req.getParameter("balance");
 		String personid=req.getParameter("personid");
-		String realname=req.getParameter("realname");
+		String realname=req.getParameter("realname");	
+		//接收birthday
 		String birthday=req.getParameter("birthday");
+		//把接受的生日转变成Date类型
+		SimpleDateFormat sdf=new SimpleDateFormat("MM/dd/yyyy");
+		Date birthday1=sdf.parse(birthday);
+		//把Date类型转变成字符串类型
+		SimpleDateFormat sdf1=new SimpleDateFormat("yyyy-MM-dd");
+		String birthday2=sdf1.format(birthday1);
+		
 		String sex=req.getParameter("sex");
 		String address=req.getParameter("address");
 		String telephone=req.getParameter("telephone");
@@ -67,7 +89,7 @@ public class AdminServlet extends BaseServlet{
 			user.setBalance(balance);
 			user.setPersonid(personid);
 			user.setRealname(realname);
-			user.setBirthday(birthday);
+			user.setBirthday(birthday2);
 			user.setSex(sex);
 			user.setAddress(address);
 			user.setTelephone(telephone);
